@@ -30,12 +30,6 @@ public class SplashScreen {
                     mSplashDialog.setContentView(R.layout.launch_screen);
                     mSplashDialog.setCancelable(false);
 
-                    TextView randomTextView = (TextView) findViewById(R.id.randomTextView);
-                    String[] slogans = mDialog.getContext().getResources().getStringArray(R.string.slogans);
-
-                    int randomNum = new Random().nextInt((slogans.size());
-                    randomTextView.setText(slogans[randomNum]);
-
                     if (!mSplashDialog.isShowing()) {
                         mSplashDialog.show();
                     }
@@ -48,6 +42,14 @@ public class SplashScreen {
      */
     public static void show(final Activity activity) {
         show(activity,false);
+    }
+
+    public static void setDialog(Dialog dialog) {
+        mSplashDialog = dialog;
+    }
+
+    public static void setActivity(WeakReference<Activity> activity) {
+        mActivity = activity;
     }
 
     /**
