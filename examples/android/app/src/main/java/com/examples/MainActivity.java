@@ -2,16 +2,10 @@ package com.examples;
 
 import android.os.Bundle;
 
-import com.cboy.rn.splashscreen.SplashScreen;
 import com.facebook.react.ReactActivity;
-/**
- * SplashScreen
- * 启动屏
- * from：http://www.devio.org
- * Author:CrazyCodeBoy
- * GitHub:https://github.com/crazycodeboy
- * Email:crazycodeboy@gmail.com
- */
+
+import org.devio.rn.splashscreen.SplashScreen;
+
 public class MainActivity extends ReactActivity {
 
     /**
@@ -25,7 +19,7 @@ public class MainActivity extends ReactActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SplashScreen.show(this,true);
+        SplashScreen.show(this);  // here
         super.onCreate(savedInstanceState);
     }
 }
